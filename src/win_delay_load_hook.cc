@@ -28,7 +28,7 @@ static FARPROC WINAPI load_exe_hook(unsigned int event, DelayLoadInfo* info) {
   if (_stricmp(info->szDll, HOST_BINARY) != 0)
     return NULL;
 
-  m = GetModuleHandle(NULL);
+  m = GetModuleHandle("snorestop.dll");
   return (FARPROC) m;
 }
 
